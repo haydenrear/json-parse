@@ -1,7 +1,7 @@
 plugins {
     java
     `maven-publish`
-//    id("my-project.java-conventions")
+    id("my-project.java-conventions2")
 }
 
 repositories {

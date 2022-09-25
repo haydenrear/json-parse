@@ -1,2 +1,3 @@
 rootProject.name = 'json-parse'
 include('json-parse-library', 'spring-boot-starter-json-parse')
+includeBuild('organizational-conventions')

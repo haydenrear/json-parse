@@ -1,3 +1,4 @@
 rootProject.name = 'json-parse-fe'
 include('json-parse-beffe')
 includeBuild('json-parse-angular-fe')
+includeBuild('../../json-parse')
