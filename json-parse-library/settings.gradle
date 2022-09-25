@@ -1,0 +1,4 @@
+rootProject.name = 'json-parse-library'
+//include('json-parse-library')
+//includeBuild('json-parse-fe')
+//includeBuild("organizational-conventions")
