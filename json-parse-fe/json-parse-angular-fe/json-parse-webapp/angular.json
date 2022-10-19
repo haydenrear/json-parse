@@ -103,6 +103,5 @@
         }
       }
     }
-  },
-  "defaultProject": "json-parse-webapp"
+  }
 }

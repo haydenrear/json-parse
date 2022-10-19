@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {ParseService} from "../parse.service";
 import {map} from "rxjs/operators";
 import {Subscription} from "rxjs";
@@ -12,8 +12,8 @@ import {Subscription} from "rxjs";
 export class FormComponent implements OnInit {
 
   response: string[] = [];
-  parseForm = new FormGroup({
-    toParse: new FormControl('')
+  parseForm = new UntypedFormGroup({
+    toParse: new UntypedFormControl('')
   });
 
   constructor(private parseService: ParseService) { }
