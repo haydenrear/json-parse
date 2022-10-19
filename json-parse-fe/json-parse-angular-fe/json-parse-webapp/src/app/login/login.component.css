@@ -1,0 +1,9 @@
+.loginContainer {
+  padding: 100px;
+  display: flex;
+}
+
+button {
+  margin: auto;
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+.centered {
+  margin: auto;
+}
+
+.multi_lines_text {
+  white-space: pre-line;
+}
+
+.bodyText {
+  display: flex;
+  width: 60vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 40vh;
+}
+
+.title {
+  margin: auto;
+  text-align: center;
+}
+

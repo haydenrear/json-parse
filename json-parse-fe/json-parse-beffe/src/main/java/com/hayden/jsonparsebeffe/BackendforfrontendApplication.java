@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JsonParseBeffeApplication {
+public class BackendforfrontendApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JsonParseBeffeApplication.class, args);
+        SpringApplication.run(BackendforfrontendApplication.class, args);
     }
 
 }

@@ -1,0 +1,16 @@
+.parseEntryContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 80vh
+}
+
+.output_text {
+  width: 80vh;
+  margin: auto;
+}
+
+.text_box {
+  height: 40px;
+  font-size: 14px;
+}

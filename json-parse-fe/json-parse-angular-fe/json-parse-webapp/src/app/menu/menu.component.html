@@ -1,0 +1,7 @@
+<mat-tab-group class="menu bottom-padding" (selectedTabChange)="goToProperties($event)">
+  <mat-tab label="Parse"></mat-tab>
+  <div *ngIf="notLoggedIn===true" class="colorLabel"><mat-tab label="Login"></mat-tab></div>
+  <div ><mat-tab label="Blog"></mat-tab></div>
+  <div ><mat-tab label="About"></mat-tab></div>
+</mat-tab-group>
+<router-outlet></router-outlet>

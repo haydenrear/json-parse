@@ -1,5 +1,7 @@
 # Building
 
+Note: this project requires jdk 15 or lower in order to alter the byte code and create classes in memory from the JSON. 
+
 from main directory
 
 ```commandline

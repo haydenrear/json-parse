@@ -1,0 +1,92 @@
+version: '3.4'
+services:
+  keycloak:
+    build: ./keycloak
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    volumes:
+      - /Users/hayde/Documents/docker/keycloak:/docker/keycloak
+#  servicediscovery:
+#      build: ./servicediscovery
+#      # Mapping of container port to host
+#      ports:
+#        - "8761:8761"
+#      volumes:
+#        - /Users/hayde/Documents/docker/keycloak:/docker
+#      expose:
+#        - "8761"
+#      hostname: servicediscovery
+#  gateway:
+#      build: ./gateway
+#      # Mapping of container port to host
+#      ports:
+#        - "8900:8900"
+#      volumes:
+#        - /Users/hayde/Documents/docker/keycloak:/docker
+#      expose:
+#        - "8900"
+#      hostname: gateway
+#      depends_on:
+#        - servicediscovery
+#      environment:
+#        - eureka.client.service-url.defaultZone=http://servicediscovery:8761/eureka
+#  thread:
+#      build: ./thread
+#      # Mapping of container port to host
+#      ports:
+#        - "80:9000"
+#      # Link database container to app container
+#      # for rechability.
+#      expose:
+#        - "9000"
+#      hostname: thread
+#      depends_on:
+##       - mongo
+#        - servicediscovery
+#      volumes:
+#        - /Users/hayde/Documents/docker/keycloak:/docker
+#      environment:
+#        - eureka.client.service-url.defaultZone=http://servicediscovery:8761/eureka
+#
+#  backendforfrontend:
+#    build: ./backendforfrontend
+#    # Mapping of container port to host
+#    ports:
+#      - "9002:9002"
+#    expose:
+#      - "9002"
+#    volumes:
+#      - /Users/hayde/Documents/docker/keycloak:/docker
+#    hostname: backendforfrontend
+#    depends_on:
+#      - gateway
+#      - servicediscovery
+#    environment:
+#      - eureka.client.service-url.defaultZone=http://servicediscovery:8761/eureka
+#      - url.threadpost.url=gateway:8900/threadpost
+#  mongo:
+#  # image to fetch from docker hub
+#    build:
+#      context: ./mongo  # directory w/ docker file
+#      dockerfile: Dockerfile-mongo
+#  #image: mysql/mysql-server:5.7  < - this is what is in that db/dockerfile
+#  # Environment variables for startup script
+#  # container will use these variables
+#  # to start the container with these define variables.
+#    environment:
+#      ME_CONFIG_MONGODB_ADMINUSERNAME: hayden
+#      ME_CONFIG_MONGODB_ADMINPASSWORD: Goldmine423
+#  # Mount init.sql file to automatically run
+#  # and create tables for us.
+#  # everything in docker-entrypoint-initdb.d folder
+#  # is executed as soon as container is up nd running.
+#    volumes:
+#      - /Users/hayde/Documents/docker/keycloak/mongo:/docker
+#networks:
+#  this-services-network:
+#    driver: bridge

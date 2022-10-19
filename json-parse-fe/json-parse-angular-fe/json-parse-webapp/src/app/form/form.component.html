@@ -1,0 +1,12 @@
+<form class="parseEntryContainer" [formGroup]="parseForm" (ngSubmit)="sendParse()">
+  <input id="toParse" type="text" formControlName="toParse" class="text_box">
+  <button type="submit">ParseJson</button>
+</form>
+
+<div *ngFor="let responseItem of response" >
+  <pre class="multi_lines_text">
+    <div class="output_text">
+    {{responseItem}}
+    </div>
+  </pre>
+</div>
