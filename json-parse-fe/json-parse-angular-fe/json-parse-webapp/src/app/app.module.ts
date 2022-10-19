@@ -22,6 +22,7 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {IAppState, INITIAL_STATE, rootReducer} from "./store";
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import {IAppState, INITIAL_STATE, rootReducer} from "./store";
         MatButtonModule,
         ReactiveFormsModule,
         MatMenuModule,
+        StoreModule.forRoot({}, {}),
     ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
