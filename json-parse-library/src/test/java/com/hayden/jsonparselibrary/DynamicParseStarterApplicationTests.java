@@ -267,7 +267,7 @@ class DynamicParseStarterApplicationTests {
 
         System.out.println(testParsedClass);
 
-        var o = testParsedClass.getConstructor(null).newInstance();
+        var o = testParsedClass.getConstructor().newInstance();
         System.out.println(o.getClass().getName());
 
         o.getClass().getField("lastUpdateId").set(o, 4321L);
@@ -284,7 +284,7 @@ class DynamicParseStarterApplicationTests {
         var output = dynamicParseJson.dynamicParse(sb.toString(), "TestParseComplex", null,
                                                    "src/main/java/com/hayden/jsonparselibrary/dynamic"
         ).get();
-        var complex = output.clzz().toClass().getConstructor(null).newInstance();
+        var complex = output.clzz().toClass().getConstructor().newInstance();
         var readVal = om.readValue(sb.toString(), Class.forName(complex.getClass().getName()));
         String readValue = om.writeValueAsString(readVal);
         Assertions.assertTrue(recursiveEquals(sb.toString(), readValue));

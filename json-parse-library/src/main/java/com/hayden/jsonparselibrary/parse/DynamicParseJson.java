@@ -24,6 +24,7 @@ public abstract class DynamicParseJson<CLASS_INFO extends ClassInfo<CLASS_C, FIE
     private static final LookupClzz neighbor = new LookupClzz();
 
     abstract ClassConstruct.ClassConstructFactory<FIELD_C,CLASS_C,FIELD,CLASS> getConstructAbstractFactory();
+
     abstract ClassInfo.ClassInfoFactory<CLASS_INFO, CLASS_C, FIELD_C, CLASS, FIELD> getClassInfoFactory();
 
     public DynamicParseJson(
