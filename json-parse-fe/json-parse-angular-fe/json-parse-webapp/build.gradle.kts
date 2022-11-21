@@ -2,7 +2,7 @@ import com.github.gradle.node.npm.task.NpxTask
 
 group = "com.hayden"
 version = "0.0.1-SNAPSHOT"
-description = "json-parse-webapp"
+description = "merge-social-webapp"
 
 repositories {
     mavenLocal()

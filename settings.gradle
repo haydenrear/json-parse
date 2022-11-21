@@ -1,3 +1,3 @@
-rootProject.name = 'json-parse'
-include('json-parse-library', 'spring-boot-starter-json-parse')
+rootProject.name = 'merge-social'
+include('merge-social-library', 'spring-boot-starter-merge-social')
 includeBuild('organizational-conventions')

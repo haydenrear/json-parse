@@ -5,10 +5,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hayden.jsonparselibrary.decompile.Decompile;
 import com.hayden.jsonparselibrary.decompile.DecompilePrinter;
 import com.hayden.jsonparselibrary.decompile.LoadClass;
-import com.hayden.jsonparselibrary.parse.*;
+import com.hayden.jsonparselibrary.parse.DynamicParsingException;
+import com.hayden.jsonparselibrary.parse.JavassistClassInfo;
+import com.hayden.jsonparselibrary.parse.JavassistDynamicParseJson;
+import com.hayden.jsonparselibrary.parse.JavassistReParse;
 import javassist.CannotCompileException;
-import javassist.CtClass;
-import javassist.CtField;
 import lombok.SneakyThrows;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -27,18 +28,19 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-import static com.fasterxml.jackson.databind.type.LogicalType.Collection;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * must use illegal-access=permit and also because you can only create the class once you have to run
  * these tests one by one for them to pass
  */
-@SpringBootTest(classes={JavassistDynamicParseJson.class, ObjectMapper.class, DecompilePrinter.class, LoadClass.class, JavassistReParse.class, Decompile.class})
+@SpringBootTest(classes={
+        JavassistDynamicParseJson.class, ObjectMapper.class, DecompilePrinter.class,
+        LoadClass.class, JavassistReParse.class, Decompile.class
+})
 @ExtendWith(SpringExtension.class)
 @DirtiesContext
 class DynamicParseStarterApplicationTests {

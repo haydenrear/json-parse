@@ -40,7 +40,7 @@ dependencies {
 
 group = "com.hayden"
 version = "0.0.1-SNAPSHOT"
-description = "json-parse-beffe"
+description = "merge-social-beffe"
 
 publishing {
     publications.create<MavenPublication>("maven") {
