@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":merge-social-library"))
+    implementation(project(":json-parse-library"))
     implementation("org.springframework.boot:spring-boot-starter:2.7.3")
     implementation("org.springframework.boot:spring-boot-test:2.7.3")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.3")

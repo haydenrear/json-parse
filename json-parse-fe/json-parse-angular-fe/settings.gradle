@@ -1,2 +1,2 @@
-rootProject.name = 'merge-social-angular-fe'
-include('merge-social-webapp')
+rootProject.name = 'json-parse-angular-fe'
+include('json-parse-webapp')

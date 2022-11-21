@@ -11,12 +11,12 @@ gradle build
 then build beffe
 
 ```commandline
-cd merge-social-fe
+cd json-parse-fe
 gradle build
 ```
 
 then build angular fe
 ```commandline
-cd merge-social-angular-fe 
+cd json-parse-angular-fe 
 gradle build
 ```

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "merge-social-webapp": {
+    "json-parse-webapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "merge-social-webapp:build:production"
+              "browserTarget": "json-parse-webapp:build:production"
             },
             "development": {
-              "browserTarget": "merge-social-webapp:build:development"
+              "browserTarget": "json-parse-webapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "merge-social-webapp:build"
+            "browserTarget": "json-parse-webapp:build"
           }
         },
         "test": {

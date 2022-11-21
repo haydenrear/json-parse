@@ -25,7 +25,7 @@ dependencies {
 
 group = "com.hayden"
 version = "0.0.1-SNAPSHOT"
-description = "merge-social-library"
+description = "json-parse-library"
 
 
 publishing {

@@ -24,14 +24,14 @@ dependencies {
     implementation("org.javassist:javassist:3.28.0-GA")
     implementation("org.projectlombok:lombok:1.18.24")
     implementation("org.jd:jd-core:1.1.4")
-    implementation(project(":merge-social-webapp"))
+    implementation(project(":json-parse-webapp"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 group = "com.hayden"
 version = "0.0.1-SNAPSHOT"
-description = "merge-social-angular-fe"
+description = "json-parse-angular-fe"
 
 publishing {
     publications.create<MavenPublication>("maven") {
